@@ -150,7 +150,7 @@ def main():
         pip_flags.append('--editable')
     tljh_repo_path = os.environ.get(
         'TLJH_BOOTSTRAP_PIP_SPEC',
-        'git+https://github.com/jupyterhub/the-littlest-jupyterhub.git@health-check'
+        'git+https://github.com/jason-huling/the-littlest-jupyterhub.git@health-check'
     )
 
     run_subprocess([
