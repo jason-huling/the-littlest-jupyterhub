@@ -236,8 +236,9 @@ def ensure_user_environment(user_requirements_txt_file):
     Set up user conda environment with required packages
     """
     logger.info("Setting up user environment...")
-    miniconda_version = '4.5.4'
-    miniconda_installer_md5 = "a946ea1d0c4a642ddf0c3a26a18bb16d"
+    # https://repo.anaconda.com/miniconda/
+    miniconda_version = '4.7.12.1'
+    miniconda_installer_md5 = "23bf3acd6aead6e91fb936fc185b033e"
 
     if not conda.check_miniconda_version(USER_ENV_PREFIX, miniconda_version):
         logger.info('Downloading & setting up user environment...')
@@ -246,7 +247,7 @@ def ensure_user_environment(user_requirements_txt_file):
 
     conda.ensure_conda_packages(USER_ENV_PREFIX, [
         # Conda's latest version is on conda much more so than on PyPI.
-        'conda==4.5.8'
+        'conda==4.8.1'
     ])
 
     conda.ensure_pip_packages(USER_ENV_PREFIX, [
