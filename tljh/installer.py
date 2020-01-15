@@ -237,7 +237,7 @@ def ensure_user_environment(user_requirements_txt_file):
     logger.info("Setting up user environment...")
     # https://repo.anaconda.com/miniconda/
     miniconda_version = '4.7.12.1'
-    miniconda_installer_md5 = "23bf3acd6aead6e91fb936fc185b033e"
+    miniconda_installer_md5 = "81c773ff87af5cfac79ab862942ab6b3"
 
     if not conda.check_miniconda_version(USER_ENV_PREFIX, miniconda_version):
         logger.info('Downloading & setting up user environment...')
